@@ -1,23 +1,32 @@
-import "./App.css";
 import React from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
-import Widgets from './Widgets';
+import Widgets from "./Widgets";
+import Login from "./Login";
+import "./App.css";
 
 function App() {
+  const user = null;
+
   return (
     // BEM naming convention
     <div className="app">
-      <Header />
+      {!user ? (
+        <h1>
+          <Login />
+        </h1>
+      ) : (
+        <>
+          <Header />
 
-      <div className="app__body">
-        <Sidebar />
-        <Feed />
-        {/* widgets */}
-        {/* <Widgets /> */}
-        <Widgets />
-      </div>
+          <div className="app__body">
+            <Sidebar />
+            <Feed />
+            <Widgets />
+          </div>
+        </>
+      )}
     </div>
   );
 }

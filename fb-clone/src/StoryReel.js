@@ -17,17 +17,17 @@ function StoryReel() {
         title="Shrinkhala Khatiwada"
       />
 
-      <Story
+      {/* <Story
         image="https://i.pinimg.com/736x/1a/ae/b5/1aaeb5c10b53ef048eb907d0ed4a3c49.jpg"
         profileSrc="https://i.pinimg.com/736x/a7/94/2a/a7942a7fc2659b622265886b97ac5ea8.jpg"
         title="Barsha Siwakoti"
-      />
+      /> */}
 
-      <Story
+      {/* <Story
         image="https://image.tmdb.org/t/p/w500/jpurJ9jAcLCYjgHHfYF32m3zJYm.jpg"
         profileSrc="https://cdn.vox-cdn.com/thumbor/9eMMS0KrIzKbHN0kZM0Av1yVbOg=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9490719/thor_big.jpg"
         title="Chris Hemsworth"
-      />
+      /> */}
 
       <Story
         image="https://sportshub.cbsistatic.com/i/r/2022/01/02/8cf8f5a1-da48-4657-b146-c2d4b8c0c8eb/thumbnail/1200x675/ae5fe140386d70ef54e4bc6c0a5d6440/brock-lesnar-wwe-day-1.jpg"

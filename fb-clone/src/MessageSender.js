@@ -1,13 +1,20 @@
 import { Avatar } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import "./MessegeSender.css";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 
 function MessageSender() {
+  const [input, setInput] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // set value to db and then reset the field value displayed to the user
+    setInput("");
+    setImageUrl(""); // will reset field value when you type and enter
   };
 
   return (
@@ -16,10 +23,16 @@ function MessageSender() {
         <Avatar />
         <form>
           <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             className="messageSender__input"
             placeholder={`What's on your mind?`}
           />
-          <input placeholder={`Image URL (Optional)`} />
+          <input
+            value={imageUrl}
+            onChange={(e) => setImageUrl(e.target.value)}
+            placeholder={`Image URL (Optional)`}
+          />
 
           <button onClick={handleSubmit} type="submit">
             Hidden Submit

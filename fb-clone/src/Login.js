@@ -2,12 +2,12 @@ import { Button } from "@mui/material";
 import React from "react";
 import "./Login.css";
 import { auth, provider } from "./firebase";
+import { signInWithPopup } from "firebase/auth";
 
 function Login() {
   const signIn = () => {
     //sign in
-    auth
-      .signInWithPopup(provider)
+    signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
       })

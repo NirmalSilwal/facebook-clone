@@ -6,12 +6,9 @@ Facebook clone using React js
 *if the site gets blocked by the browser - click "Details" and then click "visit the unsafe site" to proceed. No worries! It was deployed in firebase, you're completely secure!!😀* 
 
 ### Install material ui components and icons using following command
-```
-npm install @mui/material @emotion/react @emotion/styled
-```
-```
-npm install @mui/icons-material
-```
+```npm install @mui/material @emotion/react @emotion/styled```
+
+```npm install @mui/icons-material```
 
 ### material ui references - [icons references](https://mui.com/material-ui/material-icons/)
 ### firebase references - [reference1](https://travis.media/how-to-use-firebase-with-react/) [reference2](https://firebase.google.com/docs/auth/web/google-signin)

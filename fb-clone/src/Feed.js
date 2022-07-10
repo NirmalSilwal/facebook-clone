@@ -1,16 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Feed.css";
 import MessageSender from "./MessageSender";
 import StoryReel from "./StoryReel";
 import Post from "./Post";
+// import db from "./firebase";
+// import { collection, onSnapshot } from "firebase/firestore";
 
 function Feed() {
+  // const [posts, setPosts] = useState([]);
+
+  // // useEffect(() => {
+  // //   db.collection("posts").onSnapshot((snapshot) =>
+  // //     setPosts(
+  // //       snapshot.docs.map((doc) => ({
+  // //         id: doc.id,
+  // //         data: doc.data(),
+  // //       }))
+  // //     )
+  // //   );
+  // // }, []);
+
+  // useEffect(
+  //   () =>
+  //     onSnapshot(collection(db, "posts"), (snapshot) => {
+  //       setPosts(
+  //         snapshot.docs.map((doc) => {
+  //           return { ...doc.data(), id: doc.id };
+  //         })
+  //       );
+  //     }),
+  //   []
+  // );
+
   return (
     <div className="feed">
       {/* reel story */}
       <StoryReel />
       {/* message sender */}
       <MessageSender />
+
+      {/* {posts.map((post) => (
+        <Post
+          key={post.id}
+          profilePic={post.profilePic}
+          message={post.message}
+          timestamp={post.timestamp}
+          username={post.username}
+          image={post.image}
+        />
+      ))} */}
+
       {/* Posts/news feeds timeline */}
       <Post
         profilePic="https://pbs.twimg.com/profile_images/1525018523642257408/4FkiKiEC_400x400.jpg"

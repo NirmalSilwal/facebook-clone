@@ -10,13 +10,17 @@ import ChatIcon from "@mui/icons-material/Chat";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import { ExpandMoreOutlined } from "@mui/icons-material";
+import { useStateValue } from "./StateProvider";
 
 function Sidebar() {
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="sidebar">
       <SidebarRow
-        src="https://avatars.githubusercontent.com/u/31946761?v=4"
-        title="Nirmal Silwal"
+        src={user.photoURL}
+        // src="https://avatars.githubusercontent.com/u/31946761?v=4"
+        title={user.displayName}
       />
       <SidebarRow
         Icon={LocalHospitalIcon}
